@@ -13,7 +13,7 @@ s = URLSafeTimedSerializer('Thisisasecret!')
 @app.route("/",methods=["POST","GET"])
 def login():
     if 'user_id' in session:
-        return redirect("/home")
+        return redirect("/logout")
     else:
         if request.method == "POST":
             email_found= request.form.get("email")
